@@ -1,0 +1,118 @@
+Message {
+  channelId: '1085688562877476968',
+  guildId: '1085688562877476965',
+  id: '1085951083970572348',
+  createdTimestamp: 1678981314414,
+  type: 0,
+  system: false,
+  content: '!ping',
+  author: User {
+    id: '945293825176403998',
+    bot: false,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 0 },
+    username: 'leksyking',
+    discriminator: '2122',
+    avatar: null,
+    banner: undefined,
+    accentColor: undefined
+  },
+  pinned: false,
+  tts: false,
+  nonce: '1085951076680597504',
+  embeds: [],
+  components: [],
+  attachments: Collection(0) [Map] {},
+  stickers: Collection(0) [Map] {},
+  position: null,
+  roleSubscriptionData: null,
+  editedTimestamp: null,
+  reactions: ReactionManager { message: [Circular *1] },
+  mentions: MessageMentions {
+    everyone: false,
+    users: Collection(0) [Map] {},
+    roles: Collection(0) [Map] {},
+    _members: null,
+    _channels: null,
+    _parsedUsers: null,
+    crosspostedChannels: Collection(0) [Map] {},
+    repliedUser: null
+  },
+  webhookId: null,
+  groupActivityApplication: null,
+  applicationId: null,
+  activity: null,
+  flags: MessageFlagsBitField { bitfield: 0 },
+  reference: null,
+  interaction: null
+}
+
+
+
+Message {
+  channelId: '1085688562877476968',
+  guildId: '1085688562877476965',
+  id: '1085951087355363328',
+  createdTimestamp: 1678981315221,
+  type: 19,
+  system: false,
+  content: 'Pong! This message had a latency of -1305ms.',
+  author: ClientUser {
+    id: '1085683766703439983',
+    bot: true,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 0 },
+    username: "Leksy's Bot App",
+    discriminator: '6596',
+    avatar: null,
+    banner: undefined,
+    accentColor: undefined,
+    verified: true,
+    mfaEnabled: false
+  },
+  pinned: false,
+  tts: false,
+  nonce: null,
+  embeds: [],
+  components: [],
+  attachments: Collection(0) [Map] {},
+  stickers: Collection(0) [Map] {},
+  position: null,
+  roleSubscriptionData: null,
+  editedTimestamp: null,
+  reactions: ReactionManager { message: [Circular *1] },
+  mentions: MessageMentions {
+    everyone: false,
+    users: Collection(1) [Map] { '945293825176403998' => [User] },
+    roles: Collection(0) [Map] {},
+    _members: null,
+    _channels: null,
+    _parsedUsers: null,
+    crosspostedChannels: Collection(0) [Map] {},
+    repliedUser: User {
+      id: '945293825176403998',
+      bot: false,
+      system: false,
+      flags: [UserFlagsBitField],
+      username: 'leksyking',
+      discriminator: '2122',
+      avatar: null,
+      banner: undefined,
+      accentColor: undefined
+    }
+  },
+  webhookId: null,
+  groupActivityApplication: null,
+  applicationId: null,
+  activity: null,
+  flags: MessageFlagsBitField { bitfield: 0 },
+  reference: {
+    channelId: '1085688562877476968',
+    guildId: '1085688562877476965',
+    messageId: '1085951083970572348'
+  },
+  interaction: null
+}
+
+
+
