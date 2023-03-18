@@ -28,7 +28,7 @@ module.exports = {
         )
     )
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
-  // deleted: Boolean,
+  // deleted: true,
   // devOnly: Boolean,
   // testOnly: Boolean,
 

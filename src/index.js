@@ -11,6 +11,7 @@ const client = new Client({
   ],
 });
 
+client.commands = new Collection();
 eventHandler(client);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
