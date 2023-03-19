@@ -8,28 +8,21 @@ module.exports = {
     .addSubcommand((subcommand) =>
       subcommand
         .setName("user")
-        .setDescription("Get information about ban")
-        .addMentionableOption((option) =>
+        .setDescription("Get information about ban...")
+        .addUserOption((option) =>
           option
-            .setName("target-user")
-            .setDescription("The user to ban")
+            .setName("user")
+            .setDescription("Select a user")
             .setRequired(true)
         )
-    )
-    .addSubcommand((subcommand) =>
-      subcommand
-        .setName("done")
-        .setDescription("done with the ban?")
         .addStringOption((option) =>
-          option
-            .setName("reason")
-            .setDescription("The reason for banning")
-            .setRequired(true)
+          option.setName("reason").setDescription("The reason for the ban")
         )
-    )
-    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+    ),
+  permissionsRequired: [PermissionFlagsBits.Administrator],
+  botPermissions: [PermissionFlagsBits.Administrator],
   // deleted: true,
-  // devOnly: Boolean,
+  devOnly: true,
   // testOnly: Boolean,
 
   callback: (client, interaction) => {
