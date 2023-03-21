@@ -15,17 +15,21 @@ module.exports = {
     if (interaction.options.getSubcommand() === "help") {
     }
     if (interaction.options.getSubcommand() === "add") {
+      await require("../../actions/task/add");
     }
     if (interaction.options.getSubcommand() === "task") {
+      await require("../../actions/task/task");
     }
     if (interaction.options.getSubcommand() === "tasks") {
+      await require("../../actions/task/tasks");
     }
     if (interaction.options.getSubcommand() === "edit") {
+      await require("../../actions/task/edit");
     }
     if (interaction.options.getSubcommand() === "delete") {
+      await require("../../actions/task/delete");
     }
-
-    // const Task = interaction.options.getString("task");
+    return;
   },
 
   data: new SlashCommandBuilder()
