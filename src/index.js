@@ -1,6 +1,7 @@
 require("dotenv").config();
 const { Client, GatewayIntentBits, Collection } = require("discord.js");
 const eventHandler = require("./handlers/eventHandler");
+const connect = require("./database/connect");
 
 const client = new Client({
   intents: [
@@ -14,4 +15,13 @@ const client = new Client({
 client.commands = new Collection();
 eventHandler(client);
 
-client.login(process.env.DISCORD_BOT_TOKEN);
+(async () => {
+  try {
+    await connect(process.env.MONGO_URI);
+    console.log("Successfully connected to the database");
+
+    await client.login(process.env.DISCORD_BOT_TOKEN);
+  } catch (error) {
+    console.log(error);
+  }
+})();
