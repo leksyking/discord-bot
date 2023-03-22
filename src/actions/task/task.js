@@ -9,7 +9,9 @@ module.exports = async (client, interaction) => {
      */
 
     const taskId = interaction.options.getString("id");
-    const getTask = await Task.findById({ taskId });
+    const getTask = await Task.findById({ password: taskId });
+    await interaction.editReply(`Your task is: ${getTask.task}`);
+
     console.log(getTask);
     return;
   } catch (error) {

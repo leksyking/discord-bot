@@ -13,9 +13,10 @@ module.exports = async (client, interaction) => {
     const taskId = interaction.options.getString("id");
     const task = interaction.options.getString("task");
 
-    const editTask = await Task.findOne({ _id: taskId, userId: user.id });
+    const editTask = await Task.findOne({ password: taskId, userId: user.id });
     editTask.task = task;
     await editTask.save();
+    await interaction.editReply(`Edited task: ${editTask.task}`);
 
     console.log(editTask);
     return;

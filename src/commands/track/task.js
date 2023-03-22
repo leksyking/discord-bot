@@ -15,19 +15,19 @@ module.exports = {
     if (interaction.options.getSubcommand() === "help") {
     }
     if (interaction.options.getSubcommand() === "add") {
-      await require("../../actions/task/add");
+      require("../../actions/task/add")(client, interaction);
     }
     if (interaction.options.getSubcommand() === "task") {
-      await require("../../actions/task/task");
+      require("../../actions/task/task")(client, interaction);
     }
     if (interaction.options.getSubcommand() === "tasks") {
-      await require("../../actions/task/tasks");
+      require("../../actions/task/tasks")(client, interaction);
     }
     if (interaction.options.getSubcommand() === "edit") {
-      await require("../../actions/task/edit");
+      require("../../actions/task/edit")(client, interaction);
     }
     if (interaction.options.getSubcommand() === "delete") {
-      await require("../../actions/task/delete");
+      require("../../actions/task/delete")(client, interaction);
     }
     return;
   },

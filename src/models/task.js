@@ -5,7 +5,7 @@ const TaskSchema = new Schema(
     guildId: String,
     userId: String,
     task: String,
-    code: String,
+    password: String,
   },
   { timestamps: true }
 );

@@ -20,7 +20,7 @@ eventHandler(client);
     await connect(process.env.MONGO_URI);
     console.log("Successfully connected to the database");
 
-    await client.login(process.env.DISCORD_BOT_TOKEN);
+    client.login(process.env.DISCORD_BOT_TOKEN);
   } catch (error) {
     console.log(error);
   }
