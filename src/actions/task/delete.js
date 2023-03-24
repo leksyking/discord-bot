@@ -9,10 +9,9 @@ module.exports = async (client, interaction) => {
      */
 
     const taskId = interaction.options.getString("id");
-    const deleteTask = await Task.find({ password: taskId });
-    await deleteTask.remove();
+    const deleteTask = await Task.findOneAndDelete({ password: taskId });
     await interaction.editReply("Task successfully deleted");
-    console.log(deleteTask);
+
     return;
   } catch (error) {
     console.log(error);

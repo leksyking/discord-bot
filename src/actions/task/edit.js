@@ -18,7 +18,6 @@ module.exports = async (client, interaction) => {
     await editTask.save();
     await interaction.editReply(`Edited task: ${editTask.task}`);
 
-    console.log(editTask);
     return;
   } catch (error) {
     console.log(error);

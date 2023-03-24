@@ -28,7 +28,7 @@ module.exports = async (client, interaction) => {
     await interaction.editReply(
       `You added a new task: ${addTask.task} and your id is ${addTask.password}`
     );
-    console.log(addTask);
+
     return;
   } catch (error) {
     console.log(error);

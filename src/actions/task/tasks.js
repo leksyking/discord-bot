@@ -11,8 +11,9 @@ module.exports = async (client, interaction) => {
     const { user } = interaction;
 
     const getTasks = await Task.find({ userId: user.id });
-    console.log(getTasks);
-    await interaction.editReply(`Your tasks: ${getTasks.task}`);
+    const allTasks = getTasks.map((tasks) => tasks.task);
+
+    await interaction.editReply(`Your tasks: ${allTasks}`);
 
     return;
   } catch (error) {
